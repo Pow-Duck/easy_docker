@@ -38,3 +38,11 @@ func TestDockerImg(t *testing.T) {
 
 	fmt.Println(string(marshal))
 }
+
+func TestDockerRst(t *testing.T) {
+	err := Restart("ethgrey1")
+	if err != nil {
+		log.Fatalln(err)
+		return
+	}
+}

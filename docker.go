@@ -92,3 +92,12 @@ func Rm(ik string) error {
 
 	return nil
 }
+
+func Restart(ik string) error {
+	_, err := command(fmt.Sprintf("docker restart %s", ik))
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
